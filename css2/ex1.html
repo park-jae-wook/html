@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/ex1.html</title>
+<!--p324-->
+<style>
+	/* 전체 영역 안여백, 밖여백 0px */
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	/* body 태그  배경색  #ccc, 안여백 20픽셀*/
+	body{
+	  background-color: #ccc;
+	  padding: 20px;
+	}
+	
+	/* id="signup"  배경색 #fff, 테두리선 1px 실선 #222,
+	   모서리 둥글게 5px, 안여백 20px, 너비 400px, 밖여백 30px 자동(가운데정렬)*/
+	#signup{
+		background-color: #fff;
+		border: solid 1px #222;
+		border-radius: 5px;
+		padding: 20px;
+		width: 400px;
+		margin: 30px auto;
+	}   
+	   
+    /* id="signup" 자손 fieldset  테두리선 1px 실선 #ccc, 아래밖여백 30px*/
+    #signup fieldset{
+		border: solid 1px #ccc;
+		margin-bottom: 30px;
+	}
+    /* id="signup" 자손 legend   글자크기 16px, 글자굵기 진하게, 왼쪽안여백 5px
+                               아래안여백 10px*/
+    #signup legend{
+		font-size: 16px;
+		font-weight: bold;
+		padding-left: 5px;
+		padding-bottom: 10px;
+	}                           
+                               
+    /* id="signup" 자손 ul 자손 li   줄간격 30px, 목록스타일 없음, 
+       안여백 5px 10px   아래밖여백 2px*/
+    #signup ul li {
+     line-height: 30px;		
+	 list-style: none;
+	 padding: 5px 10px;
+	 margin-bottom: 2px;	
+	}   
+                        
+    /* id="signup" 자손 button  테두리선 1px 실선 #222 ,
+    모서리 둥글게 20px, 글자크기 16px, 글자간격 1px, 밖여백 자동, 안여백 7px 25px
+       배치(display)  block*/
+    #signup button{
+		border: solid 1px #222;
+		border-radius: 20px;
+	    font-size: 16px;
+	    text-align: 1px;
+	    margin: 0px auto;
+	    padding: 7px 25px;
+	    display: block;
+	}   
+       
+       
+       
+       
+        
+       /* id="signup" 자손 label 어울림 lef, 글자크기 13px, 너비 110px*/	
+       
+     #signup label{
+		 float: left;
+		 font-size: 13px;
+		 width: 110px;
+	 }
+       
+       
+       
+</style>
+</head>
+<body>
+<form id="signup">
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <ul>
+        <li>
+          <label>아이디</label>
+          <input name="userid" type="text" required autofocus>
+        </li>
+        <li>
+          <label>비밀번호</label>
+          <input name="pwd1" type="password"  required>
+        </li>
+        <li>
+          <label>비밀번호 확인</label>
+          <input name="pwd2" type="password" required>
+        </li>  
+        <li>
+          <label>회원 등급</label>
+          <input name="level" type="text" readonly value="준회원">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label>이름</label>
+          <input name="fullname" type="text" placeholder="5자미만 공백없이" required>
+        </li>
+        <li>
+          <label>메일 주소</label>
+          <input name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
+        </li>
+        <li>
+          <label>연락처</label>
+          <input name="tel" type="tel" autocomplete="off">
+        </li>  
+      </ul>
+    </fieldset>
+    <fieldset>
+      <button type="submit"> 제출 </button> 
+    </fieldset>
+  </form>
+</body>
+</html>

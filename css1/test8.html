@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test8.html</title>
+<!--p238~245-->
+<style>
+	h1, div, p{
+		/* 큰영역(문단영역,문단전체) => 블록레벨 요소(태그)=> h1,div,p
+		   작은영역 (태그요소영역) => 인라인 레벨 => span, img, strong */
+		   
+		/*내용영역 크기 width, height;
+		px, %, auto(영역 내용에 따라서 자동으로 적용) */
+		border: 10px solid blue;
+		width: 100px;
+		height: 50px;
+		
+		/*안역백*/
+		padding: 10px;
+		
+		
+		
+		/*밖여백 */
+		margin: 20px;
+		
+		/*p243 박스 크기 계산 => content-box(기본값),border-box(테투리선 기준) */
+		box-sizing: border-box;
+		
+	}
+	
+	
+	
+	
+	
+	
+</style>
+</head>
+<body>
+<h1>제목영역</h1>
+<div>큰영역 <span>작은영역</span></div>
+<p>문단영역</p>
+</body>
+</html>
