@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>css2/test16.html</title>
+<style>
+	#wrapper{
+		width: 700px;
+		/* 배치 grid , 컬럼개수 3개 1fr, 행개수 3개 100px 
+		항목배치 속성
+		grid-column-start: 컬럼 시작 라인 번호 1,
+		grid-column-end: 마지막 라인번호 1
+		grid-column: 시작번호/끝번호
+		grid-row-start: 줄시작 번호 2
+		grid-row-end: 줄 마지막 라인 번호 4
+		grid-row: 시작번호/끝번호  2/4
+		*/
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: repeat(3,100px);
+		
+		/* p432 템플릿 영역 만들어 배치 */
+		grid-template-areas: 
+		"box1 box1 box1"
+		"box2 box3 box3"
+		"box2 . box4"
+		;
+	}
+	.items{
+		padding: 15px; color: #fff;
+		font-weight: bold; text-align: center;
+	}
+	.box1{
+		background-color: blue;
+		grid-area: box1;
+	}
+	.box2{
+		background-color: green;
+		grid-area: box2;
+	}
+	.box3{
+		background-color: orange;
+		grid-area: box3;
+	}
+	.box4{
+		background-color: yellow;
+		grid-area: box4;
+	}
+</style>
+</head>
+<body>
+<div id="wrapper">
+         <div class="items box1">1. 가나다라마</div>
+         <div class="items box2">2. 가나다라마</div>
+         <div class="items box3">3. 가나다라마</div>
+		 <div class="items box4">4. 가나다라마</div>
+		
+	</div>
+</body>
+</html>
