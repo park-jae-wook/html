@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test5.html</title>
+<style>
+	/* 텍스트 관련 스타일
+	글자색 color : 색상
+	웹색상코드표 : RGB (Red Green Blue 빛의 색)
+	영문 red, 16진수 #FF0000, 10진수 RGB(255, 0,0)
+	#Red 16진수 두자리 ,Green 16진수두자리 Blue 16진수 두자리
+	2진수  0~1
+	10진수 0~9
+	=> 99 : 9*10 + 9*1
+	16진수 0~9 10(A) 11(B) 12(C) 13(D) 14(E) 15(F) 
+	=> FF : F*16 + F*1 => 255   
+	*/
+	h1{
+		
+		color: red;
+		color: #ff0000;
+		color: rgb(255, 0, 0);
+		
+		color: rgb(255, 0, 0, 0.5);
+		
+	}
+	p{
+		/*글자색 blue => 16진수 표현*/
+		color:blue;
+		color: #0100FF;
+		
+	}
+	/*class="accent" green 10진수 표현*/
+	.accent{
+		color:rgb(0, 255, 0);
+	}
+	/* p213 텍스트 정렬 left center*/
+	p{
+		text-align: right;
+		/*너비 조정*/
+		width: 300px;
+		/*215 줄간격 조절*/
+		line-height: 50px;
+	}
+	/* h1 텍스트 정렬 => 가운데 정렬, 줄간격 100px, 배경색 pink*/
+	h1{
+		
+	   background-color: pink;
+	   /* 위아래 가운데 정렬 => 줄간격, 높이 일치하면 적용*/
+	   text-align: center;	
+	   line-height: 200px;
+	   height: 200px;
+	   /* p217 텍스트 줄 표시 none, underline, overline, line-ti*/
+	   text-decoration: underline;
+	   /* p218 텍스트 그림자 효과 none,가로(왼쪽, 오른쪽) */
+	   text-shadow: 5px 5px 3px orange;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+		
+	}
+	h2{
+		/*220 대소문자 변환 none capitalize(첫글자 대문자)*/
+		text-transform: lowercase;
+		
+	}
+	p{
+		/* p221 글자 간격 조절, 단어 간격 조절 */
+		letter-spacing: 0.5em;
+		word-spacing: 2em;
+	}
+</style>
+</head>
+<body>
+	<h2>HTML</h2>
+	<h2>CSS</h2>
+	<h2>javascript</h2>
+<h1>레드향</h1>
+	<p>껍질에 붉은 빛이 돌아 <span class="accent"><a href="ex1.html">레드향</a></span>이라 불린다.</p>
+	<p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	<p id ="italic">비타민 c와 비타민 p가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/*h1태그 글자색 red 스타일 */ 
+
+h1{
+	color: red;
+}
